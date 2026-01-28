@@ -1,0 +1,428 @@
+/* <!-- LH外部向け　お問い合わせフォーム CSS -- >  */
+
+body {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+.inquiryFormArea {
+  width: 100%;
+}
+
+.inquiryPosition {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  /* リンクを付け終わったら外す */
+  /* text-decoration: none */
+}
+
+/* ヘッダー //////////////////////////////////////////////////////////////////////////*/
+header {
+  width: 100%;
+  height: 138px;
+  background-color: #ffffff;
+}
+
+.inquiryArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0px 0px 30px;
+  text-align: left;
+}
+
+.detailLinkArea {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: right;
+  align-items: center;
+  padding: 10px;
+}
+
+.detailLink {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.LH_br {
+  display: none;
+}
+
+.informationLinkArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+}
+
+.informationLink {
+  width: 132px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 45px;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.consult {
+  width: 104px;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+.titleArea {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #333333;
+  /* background-image: url(./0ce2167a31785e4eb329d2fd47479f2a_t.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  width: 100%;
+  height: 240px;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+@media screen and (min-width: 811px) {
+  .addressArea {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  body {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 10px 0px 0px 10px;
+  }
+
+  .inquiryArea {
+    display: block;
+    flex-direction: row;
+  }
+
+  .detailLinkArea {
+    margin: 15px;
+    font-size: smaller;
+  }
+
+  .detailLink {
+    height: auto;
+  }
+
+  .informationLinkArea {
+    margin: 0;
+    padding: 5px 5px 10px 5px;
+    justify-content: center;
+  }
+
+  .informationLink {
+    display: flex;
+    padding: 8px 5px;
+    margin: 5px;
+    font-size: 100%;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 10px;
+    font-size: revert-layer;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .detailLinkArea {
+    justify-content: space-evenly;
+  }
+
+  .detailLink {
+    text-align: justify;
+    writing-mode: vertical-lr;
+    font-size: medium;
+    writing-mode: vertical-rl;
+  }
+
+  .informationLinkArea {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  body {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 10px 0px 0px 10px;
+  }
+
+  .inquiryArea {
+    display: block;
+    flex-direction: row;
+  }
+
+  .detailLinkArea {
+    margin: 15px;
+    font-size: smaller;
+  }
+
+  .detailLink {
+    height: auto;
+  }
+
+  .informationLinkArea {
+    margin: 0;
+    padding: 5px 5px 10px 5px;
+  }
+
+  .informationLink {
+    padding: 5px;
+    margin: 5px;
+    font-size: small;
+  }
+
+  h1 {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .detailLinkArea {
+    justify-content: space-evenly;
+  }
+
+  .detailLink {
+    text-align: justify;
+    writing-mode: vertical-lr;
+    font-size: medium;
+    writing-mode: vertical-rl;
+  }
+
+  .informationLinkArea {
+    justify-content: center;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+.selectTimeArea {
+  border: 1px solid #333333;
+  width: 100%;
+  height: auto;
+}
+
+.selectTimeMainContents {
+  width: auto;
+  padding: 130px 25% 100px;
+}
+
+.selectTimeButton {
+  width: 60%;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333333;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin: 15px 0px 50px 0px;
+}
+
+.selectTimeDescription {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 811px) {
+  .sendButtonField {
+    text-align: center;
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    width: 90%;
+  }
+  .selectTimeMainContents {
+    padding: 5%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .selectTimeArea {
+    width: auto;
+    height: auto;
+    margin: 40px 0px;
+  }
+
+  .selectTimeDescription {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: large;
+  }
+
+  button[type="submit"] {
+    width: 90%;
+  }
+}
+
+/* footer--------------------------------------------------------------------- */
+
+footer {
+  background-color: #ececec;
+}
+
+.freeConsultationLinkField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  margin: 70px 0px 90px 0px;
+}
+
+.fellFreeMassage {
+  width: 130px;
+  position: relative;
+  top: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 13px;
+  padding: 2px 0px;
+  margin-bottom: 15px;
+}
+
+.freeConsultationLink {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 40px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.footerMainArea {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.LH_ONLINEField {
+  font-size: 32px;
+  font-weight: bold;
+
+  text-align: left;
+  padding: 10px 0px 10px 30px;
+}
+
+.footerLinkArea {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  margin-left: auto;
+  padding: 25px 40px 0px 0px;
+}
+
+.CopyrightField {
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333333;
+  padding: 5px 0px;
+}
+
+@media screen and (max-width: px) {
+  .freeConsultationLinkField {
+    margin: 70px 20px 90px 20px;
+  }
+
+  .freeConsultationLink {
+    width: 80%;
+  }
+
+  .footerMainArea {
+    flex-direction: column;
+  }
+
+  .LH_ONLINEField {
+    font-size: medium;
+    padding: 10px 0px 10px 10px;
+  }
+
+  .footerLinkArea {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .freeConsultationLinkField {
+    margin: 70px 20px 90px 20px;
+  }
+
+  .freeConsultationLink {
+    width: 80%;
+  }
+
+  .footerMainArea {
+    flex-direction: column;
+  }
+
+  .LH_ONLINEField {
+    font-size: medium;
+    padding: 10px 0px 10px 10px;
+  }
+
+  .footerLinkArea {
+    padding: 5px;
+  }
+}
