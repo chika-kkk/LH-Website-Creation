@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const client = new kintoneModule.KintoneRestAPIClient({
-	baseUrl: "https://bz1djgw4y2eo.cybozu.com",
+	baseUrl: "https://${process.env.KINTONE_DOMAIN}",
 	auth: {
-		apiToken: "nnex4elxEPXlpIfR32xFz9qDjq6AP5BIg9psRWE0"
+		apiToken: "${process.env.KINTONE_API_TOKEN}"
 	}
 });
 
@@ -27,7 +27,7 @@ app.post('/submit', async (Request, Response) => {
 		const data = Request.body;
 		console.log("届いたもの：", data);
 		const postData = {
-			app: 6,
+			app: process.env.KINTONE_APP_ID,
 			record: {
 				"姓": { value: data.姓 },
 				"名": { value: data.名 },

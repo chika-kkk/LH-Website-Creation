@@ -20,7 +20,7 @@ function kintoneDataTransmission() {
 	};
 
 
-	fetch("http://localhost:3000/submit", {
+	fetch("http://host:3000/submit", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
