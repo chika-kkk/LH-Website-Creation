@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const client = new kintoneModule.KintoneRestAPIClient({
-	baseUrl: 'https://${process.env.KINTONE_DOMAIN}/k/v1/record.json',
+	baseUrl: `https://${process.env.KINTONE_DOMAIN}/k/v1/record.json`,
 	auth: {
-		apiToken: '${process.env.KINTONE_API_TOKEN}'
+		apiToken: `${process.env.KINTONE_API_TOKEN}`
 	}
 });
 
