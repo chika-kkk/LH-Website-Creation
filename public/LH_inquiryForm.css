@@ -1,4 +1,11 @@
-/* <!-- LH外部向け　お問い合わせフォーム  -- >  */
+/* <!-- LH外部向け　お問い合わせフォーム CSS -- >  */
+
+/* すべての要素*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
@@ -8,20 +15,16 @@ body {
   height: auto;
   background-color: #ffffff;
   font-size: 18px;
-  min-height: 100vh;
 }
 
 .inquiryFormArea {
   width: 100%;
-  display: flex;
-  flex: 1;
 }
 
 .inquiryPosition {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 
 a,
@@ -110,11 +113,16 @@ header {
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
-  background-image: url(./0ce2167a31785e4eb329d2fd47479f2a_t.jpeg);
+  background-color: rgb(102, 63, 37);
+  /* background-image: url(./0ce2167a31785e4eb329d2fd47479f2a_t.jpeg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   width: 100%;
   height: 240px;
+}
+
+h1 {
+  font-size: xxx-large;
 }
 
 @media screen and (min-width: 811px) {
@@ -265,37 +273,8 @@ header {
   color: red;
   font-weight: bold;
 }
-.errorMessageArea {
-  width: 100%; /* ★幅を100%にすることで、横に並ぶ余地をなくして下の段へ落とす */
-  /* margin-left: 220px; ラベルの幅と同じ分だけ左に余白を作ると、入力欄と縦が揃う */
-  margin-top: 10px;
-}
-
-/* ラベルの隣にある「中身のdiv」を縦並びにする */
-/* .InputGroup > div:nth-child(2) {
-  display: flex;
-  flex-direction: column; /* これで中の入力欄とエラーが上下に並ぶ 
-  flex: 1; /* 残りの幅を全部使う 
-} */
-
-/* .errorMessageArea {
-  margin-top: 5px;
-} */
-
-.privacyPolicyCheckbox-error {
-  font-size: medium;
-}
-
-input.error {
-  color: #000;
-}
 
 /* フォームエリア //////////////////////////////////////////////////////////////////////////*/
-label {
-  display: inline-block;
-  width: 100%;
-}
-
 .labelGroup {
   display: inline-block;
   width: 220px;
@@ -303,12 +282,6 @@ label {
   font-weight: bold;
   padding-left: 15px;
 }
-
-/* .nameLavel,
-.firstNameKanaLavel {
-  display: grid;
-  grid-template-columns: 1ft 1ft;
-} */
 
 .addressAddressFieldLabel {
   text-align: left;
@@ -325,7 +298,9 @@ label {
 }
 
 .InputSpacing {
-  padding: 0 0 20px 0px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 30px 0px;
 }
 
 .InputGroup {
@@ -341,6 +316,7 @@ label {
 .dottedBorder {
   border-bottom: 1px dotted #333333;
   padding-top: 20px;
+  margin-left: 4px;
 }
 
 .InputArea {
@@ -356,7 +332,6 @@ label {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  text-align: justify;
 }
 
 .addressArea {
@@ -377,6 +352,7 @@ label {
   flex-direction: column;
   height: 100%;
 }
+
 .addressGroup {
   display: flex;
   flex-direction: column;
@@ -399,7 +375,7 @@ input[type="text"] {
 .firstNameInput,
 .familyNameKanaInput,
 .firstNameKanaInput {
-  width: 200px;
+  /* width: 200px; */
 }
 
 .addressInput {
@@ -448,7 +424,6 @@ inquiryContentInput {
 .radioArea {
   height: 100%;
   text-align: left;
-  padding: 0 0 20px 0;
 }
 
 .radioItem input[type="radio"] {
@@ -491,7 +466,7 @@ button[type="submit"] {
   font-size: 20px;
   text-align: center;
   color: #ffffff;
-  background-color: #333333;
+  background-color: #0097B2;
   border: none;
   border-radius: 13px;
   cursor: pointer;
@@ -510,6 +485,7 @@ button[type="submit"] {
   .labelGroup {
     padding-left: 0;
   }
+
   .addressArea {
     display: block;
     width: 100%;
@@ -532,7 +508,7 @@ button[type="submit"] {
 
   .postCodeExplanation {
     font-size: 11px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .InputGroup {
@@ -543,7 +519,8 @@ button[type="submit"] {
   }
 
   input[type="text"] {
-    margin: 10px 20px 0px;
+    /* margin: 10px 20px 0px; */
+    padding-left: 5px;
   }
 
   input[type="text"],
@@ -558,7 +535,8 @@ button[type="submit"] {
   .InputField {
     display: block;
     text-align: left;
-    margin: 10px;
+    /* margin: 10px; */
+    padding-left: 5px;
   }
 
   .radioArea {
@@ -593,9 +571,9 @@ button[type="submit"] {
     margin: 20px 10px 10px 10px;
   }
 
-  .sendButtonArea {
+  /* .sendButtonArea {
     margin: 10px;
-  }
+  } */
 
   .privacyPolicyArea {
     padding: 15px;
@@ -615,11 +593,14 @@ button[type="submit"] {
 @media screen and (max-width: 428px) {
   .labelGroup {
     padding-left: 0;
+    padding-bottom: 10px;
   }
 
   .addressArea {
     display: block;
     width: 100%;
+    /* margin-left: 10px; */
+    padding: 5px;
   }
 
   .addressAddressFieldLabel {
@@ -632,6 +613,13 @@ button[type="submit"] {
 
   .InputSpacing {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .InputSpacingName {
+    display: flex;
+    flex-direction: row;
   }
 
   .addressInputArea {
@@ -640,23 +628,27 @@ button[type="submit"] {
 
   .postCodeExplanation {
     font-size: 11px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .InputGroup {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 95%;
   }
 
-  input[type="text"] {
-    margin: 10px 20px 0px;
-  }
+  /* input[type="text"] {
+    /* margin: 10px 20px 0px; */
+  /* } */
 
-  input[type="text"],
+  */ input[type="text"],
   textarea {
     width: 90% !important;
+  }
+
+  .familyNameInput .firstNameInput .familyNameKanaInput .firstNameKanaInput {
+    margin: 0;
   }
 
   .InputArea {
@@ -666,7 +658,7 @@ button[type="submit"] {
   .InputField {
     display: block;
     text-align: left;
-    margin: 10px;
+    /* margin: 10px; */
   }
 
   .radioArea {
@@ -700,9 +692,9 @@ button[type="submit"] {
     margin: 20px 10px 10px 10px;
   }
 
-  .sendButtonArea {
+  /* .sendButtonArea {
     margin: 10px;
-  }
+  } */
 
   .privacyPolicyArea {
     padding: 15px;
@@ -783,16 +775,12 @@ footer {
 }
 
 .CopyrightField {
-  height: 100%;
+  height: 20px;
   font-size: 12px;
   text-align: center;
   color: #ffffff;
   background-color: #333333;
   padding: 5px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 @media screen and (max-width: px) {
@@ -839,52 +827,4 @@ footer {
   .footerLinkArea {
     padding: 5px;
   }
-}
-
-/* 完了画面 //////////////////////////////////////////////////////////////////////////////*/
-.completionMainArea {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.completionMain {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  border: 3px solid #ececec;
-  /* width: 200px; */
-  max-width: 70%;
-}
-
-.completionContents {
-  width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  align-content: center;
-  font-size: large;
-  flex: 1;
-  min-height: 100%;
-  text-align: center;
-}
-
-.completionMassage {
-  margin: 20px;
-  font-size: x-large;
-}
-
-.completionMassage2 {
-  font-size: medium;
-}
-.checkMark {
-  display: inline-block;
-  border: #1cc416 solid 2px;
-  border-color: #1cc416;
-  font-size: 40px;
-  color: #1cc416;
-  border-radius: 90px;
-  width: 60px;
-  height: 60px;
-  margin-top: 20px;
 }
