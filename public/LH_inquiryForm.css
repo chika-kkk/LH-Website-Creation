@@ -371,12 +371,12 @@ input[type="text"] {
   font-size: 14px;
 }
 
-.familyNameInput,
+/* .familyNameInput,
 .firstNameInput,
 .familyNameKanaInput,
 .firstNameKanaInput {
-  /* width: 200px; */
-}
+  width: 200px;
+} */
 
 .addressInput {
   width: 350px;
