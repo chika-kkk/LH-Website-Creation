@@ -15,7 +15,7 @@
   <div class="inquiryFormArea" style="text-align: center">
     <div class="inquiryPosition">
       <header>
-        <!-- <div>
+        <div>
           <div class="inquiryArea">
             <div class="logoArea">
               <div class="logo">LITTLE HEROES</div>
@@ -53,7 +53,7 @@
               <a href="" target="_blank">入会申し込み</a>
             </div>
           </div>
-        </div> -->
+        </div>
       </header>
 
       <div class="titleArea">
@@ -64,64 +64,81 @@
         <div class="InputArea">
           <div class="InputField">
             <div class="InputGroup dottedBorder">
-              <div class="InputSpacing ">
-                <div class="labelGroup RequiredMark">お名前</div>
+              <label class="labelGroup RequiredMark nameLavel">お名前</label>
+              <div class="InputSpacing">
                 <div class="InputSpacingName">
-                  <input type="text" class="familyNameInput" placeholder="例）留学" />　<input type="text"
-                    class="firstNameInput" placeholder="例）花子" />
+                  <input type="text" name="familyNameInput" class="familyNameInput" id="familyNameInput"
+                    placeholder="例）留学" />　<input type="text" name="firstNameInput" class="firstNameInput"
+                    id="firstNameInput" placeholder="例）花子" />
                 </div>
+                <div class="errorMessageArea"></div>
               </div>
             </div>
 
             <div class="InputGroup dottedBorder">
+              <label class="labelGroup RequiredMark firstNameKanaLavel">お名前（カナ）</label>
               <div class="InputSpacing">
-                <div class="labelGroup RequiredMark">お名前（カナ）</div>
                 <div class="InputSpacingName">
-                  <input type="text" class="familyNameKanaInput" placeholder="例）RYUGAKU" />　<input type="text"
-                    class="firstNameKanaInput" placeholder="例）HANAKO" />
+                  <input type="text" name="familyNameKanaInput" class="familyNameKanaInput" id="familyNameKanaInput"
+                    placeholder="例）RYUGAKU" />　<input type="text" name="firstNameKanaInput" class="firstNameKanaInput"
+                    id="firstNameKanaInput" placeholder="例）HANAKO" />
                 </div>
+                <div class="errorMessageArea"></div>
               </div>
             </div>
 
             <div class="addressArea">
-              <div class="addressAddressFieldLabel">住所</div>
+              <label class="addressAddressFieldLabel">住所</label>
               <div class="addressInputArea">
                 <div class="InputGroup addressGroup">
                   <span class="addressFieldLabel postCodeInput">郵便番号</span>
-                  <input type="text" class="addressInput" placeholder="例）1510053" />
+                  <input type="text" name="postCodeInput" class="addressInput" id="addressInput"
+                    placeholder="例）1510053" />
                   <span class="postCodeExplanation">半角数字　-（ハイフン）なしで入力してください。<br />
                     郵便番号を入力されますと住所が自動で表示されます。</span>
+                  <div class="errorMessageArea"></div>
                 </div>
 
                 <div class="InputGroup addressGroup">
                   <span class="addressFieldLabel">住所１（都道府県）</span>
-                  <input type="text" class="prefectureInput" placeholder="例）東京都" />
+                  <input type="text" name="prefectureInput" class="prefectureInput" placeholder="例）東京都"
+                    id="prefectureInput" />
+                  <div class="errorMessageArea"></div>
                 </div>
                 <div class="InputGroup addressGroup">
                   <span class="addressFieldLabel">住所２（市区町村）</span>
-                  <input type="text" class="cityInput" placeholder="例）渋谷区" />
+                  <input type="text" name="cityInput" class="cityInput" id="cityInput" placeholder="例）渋谷区" />
+                  <div class="errorMessageArea"></div>
                 </div>
                 <div class="InputGroup addressGroup">
                   <span class="addressFieldLabel">住所３（番地）</span>
-                  <input type="text" class="streetInput" placeholder="例）1-12-34" />
+                  <input type="text" name="streetInput" class="streetInput" id="streetInput" placeholder="例）2-11-17" />
+                  <div class="errorMessageArea"></div>
                 </div>
                 <div class="InputGroup addressGroup">
                   <span class="addressFieldLabel">住所４（建物名、お部屋番号）</span>
-                  <input type="text" class="buildingInput" placeholder="例）〇〇ビル001" />
+                  <input type="text" name="buildingInput" class="buildingInput" id="buildingInput"
+                    placeholder="例）ラウンドクロス新宿6階" />
                 </div>
+                <div class="errorMessageArea"></div>
               </div>
             </div>
 
             <div class="InputGroup dottedBorder">
-              <div class="labelGroup RequiredMark">メールアドレス</div>
+              <label for="mailInput" class="labelGroup RequiredMark">メールアドレス</label>
               <div class="InputSpacing">
-                <input type="text" class="mailInput" placeholder="例）littleheroes@sample.co.jp" />
+                <input type="text" name="mailInput" id="mailInput" class="mailInput" id="mailInput"
+                  placeholder="例）ryugaku@sample.co.jp" />
+                <div class="errorMessageArea"></div>
               </div>
             </div>
+
             <div class="InputGroup dottedBorder">
-              <div class="labelGroup RequiredMark">電話番号</div>
+              <label for="phoneInput" class="labelGroup RequiredMark">電話番号</label>
               <div class="InputSpacing">
-                <input type="text" class="phoneInput" placeholder="例）09012345678" />
+                <input type="text" name="phoneInput" id="phoneInput" class="phoneInput" id="phoneInput"
+                  placeholder="例）09012345678" />
+                <div class="errorMessageArea"></div>
               </div>
             </div>
 
@@ -130,30 +147,36 @@
               <div class="radioArea">
                 <div class="radioLineBreak">
                   <div class="radioItem radioItem1">
-                    <input type="radio" name="inquiryType" /><span class="radioSelect">無料説明会について</span>
+                    <input name="inquiryType" type="radio" value="無料説明会について" /><span
+                      class="radioSelect">無料説明会について</span>
                   </div>
                   <div class="radioItem radioItem2">
-                    <input type="radio" name="inquiryType" /><span class="radioSelect">内容について</span>
+                    <input type="radio" name="inquiryType" value="内容について" /><span class="radioSelect">内容について</span>
                   </div>
                   <div class="radioItem radioItem3">
-                    <input type="radio" name="inquiryType" /><span class="radioSelect">料金について</span>
+                    <input type="radio" name="inquiryType" value="料金について" /><span class="radioSelect">料金について</span>
                   </div>
                 </div>
                 <div class="radioLineBreak">
                   <div class="radioItem radioItem4">
-                    <input type="radio" name="inquiryType" /><span class="radioSelect">サービス全般について</span>
+                    <input type="radio" name="inquiryType" value="サービス全般について" /><span
+                      class="radioSelect">サービス全般について</span>
                   </div>
                   <div class="radioItem radioItem5">
-                    <input type="radio" name="inquiryType" /><span class="radioSelect">その他お問い合わせ</span>
+                    <input type="radio" name="inquiryType" value="その他お問い合わせ" /><span
+                      class="radioSelect">その他お問い合わせ</span>
                   </div>
                 </div>
+                <div class="errorMessageArea"></div>
               </div>
             </div>
+
             <div class="InputGroup dottedBorder">
               <div class="labelGroup RequiredMark">お問い合わせ内容</div>
               <div class="InputSpacing">
-                <textarea class="inquiryContentInput" rows="12" cols="65"
-                  placeholder="例）littleheroes@sample.co.jp"></textarea>
+                <textarea name="inquiryContentInput" class="inquiryContentInput" id="inquiryContentInput" rows="12"
+                  cols="65" placeholder="例）ryugaku@sample.co.jp"></textarea>
+                <div class="errorMessageArea"></div>
               </div>
             </div>
           </div>
@@ -161,17 +184,20 @@
             <div class="privacyPolicyArea">
               <div>プライバシーポリシーに同意する。</div>
               <div class="privacyPolicyField">
-                <input type="checkbox" class="privacyPolicyCheckbox" />同意する
+                <input type="checkbox" name="privacyPolicyCheckbox" class="privacyPolicyCheckbox" />同意する
               </div>
+              <div class="errorMessageArea"></div>
             </div>
             <div class="sendButtonField">
-              <button type="submit" class="sendButton">送信する</button>
+              <button type="submit" class="sendButton">
+                <!-- <a href="./LH_inquiryForm_confirmationForm.html">送信する</a> -->送信する
+              </button>
             </div>
           </div>
         </div>
       </form>
       <footer>
-        <!-- <div class="freeConsultationLinkField">
+        <div class="freeConsultationLinkField">
           <div class="fellFreeMassage">まずはお気軽に！</div>
           <div class="freeConsultationLink">
             <a href="" target="_blank">無料相談はコチラから</a>
@@ -189,7 +215,7 @@
             </div>
           </div>
           <div class="CopyrightField">©︎Respawn</div>
-        </div> -->
+        </div>
       </footer>
     </div>
   </div>
