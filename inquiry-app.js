@@ -55,8 +55,8 @@ app.post('/submit', async (Request, Response) => {
 	}
 });
 
-// Renderのポートかローカルの3000
-const PORT = process.env.PORT || 3000;
+// Renderのポートか10000番ポートを使用する
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
 	console.log(`${PORT}番ポートで受付開始`);
